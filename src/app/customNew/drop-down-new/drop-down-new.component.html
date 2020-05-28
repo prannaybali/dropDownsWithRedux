@@ -1,0 +1,19 @@
+<mat-form-field>
+  <mat-label>Region</mat-label>
+  <mat-select [(value)]="selectedRegion" (selectionChange)="OnSelect(selectedRegion)">
+    <mat-option *ngFor="let region of regions" [value]="region.name" >
+      {{region.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+
+<mat-form-field>
+  <mat-label>Country</mat-label>
+  <mat-select [(value)]="selectedCountry" (selectionChange)="onCountrySelect(selectedCountry)">
+    <mat-option *ngFor="let region of countries" [value]="region" >
+      {{region.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
